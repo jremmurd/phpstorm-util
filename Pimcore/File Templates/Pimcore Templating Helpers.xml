@@ -1,0 +1,145 @@
+<templateSet group="Pimcore Templating Helpers">
+  <template name="placeholder" value="&lt;?= $this-&gt;placeholder(&quot;$NAME$&quot;); ?&gt; $END$" description="pimcore placeholder" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;placeholder&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="placeholder php" value="$this-&gt;placeholder(&quot;$NAME$&quot;); $END$" description="pimcore placeholder" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;placeholder&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="headlink" value="&lt;?= $this-&gt;headLink()-&gt;appendStylesheet(&quot;$PATH$&quot;) ?&gt; $END$" description="pimcore headlink" toReformat="false" toShortenFQNames="true">
+    <variable name="PATH" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="headlink php" value="$this-&gt;headLink()-&gt;appendStylesheet(&quot;$PATH$&quot;); $END$" description="pimcore headlink" toReformat="false" toShortenFQNames="true">
+    <variable name="PATH" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="headmetaName php" value="$this-&gt;headMeta()-&gt;appendName(&quot;$PARAM$&quot;, &quot;$CONTENT$&quot;); $END$" description="pimcore headmeta append name" toReformat="false" toShortenFQNames="true">
+    <variable name="PARAM" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CONTENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="headmetaName" value="&lt;?php $this-&gt;headMeta()-&gt;appendName(&quot;$PARAM$&quot;, &quot;$CONTENT$&quot;); ?&gt; $END$" description="pimcore headmeta append name" toReformat="true" toShortenFQNames="true">
+    <variable name="PARAM" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CONTENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="headmetaProperty php" value="$this-&gt;headMeta()-&gt;setProperty(&quot;$PROPERTY$&quot;, &quot;$CONTENT$&quot;);" description="pimcore headmeta append property" toReformat="false" toShortenFQNames="true">
+    <variable name="PROPERTY" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CONTENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="headmetaProperty" value="&lt;?php $this-&gt;headMeta()-&gt;setProperty(&quot;$PROPERTY$&quot;, &quot;$CONTENT$&quot;); ?&gt; $END$" description="pimcore headmeta append property" toReformat="true" toShortenFQNames="true">
+    <variable name="PROPERTY" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CONTENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="headscript php" value="$this-&gt;headScript()-&gt;appendFile(&quot;$PATH$&quot;);" description="pimcore headscript" toReformat="false" toShortenFQNames="true">
+    <variable name="PATH" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="headscript" value="&lt;?php $this-&gt;headScript()-&gt;appendFile(&quot;$PATH$&quot;); ?&gt; $END$" description="pimcore headscript" toReformat="true" toShortenFQNames="true">
+    <variable name="PATH" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="inlinescript php" value="$this-&gt;inlineScript()-&gt;appendFile(&quot;$PATH$&quot;); $END$" description="pimcore headscript" toReformat="true" toShortenFQNames="true">
+    <variable name="PATH" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="inlinescript" value="&lt;?php $this-&gt;inlineScript()-&gt;appendFile(&quot;$PATH$&quot;); ?&gt; $END$" description="pimcore headscript" toReformat="true" toShortenFQNames="true">
+    <variable name="PATH" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="cache" value="&lt;?php if(!$this-&gt;cache(&quot;$CACHE_KEY$&quot;, $LIFETIME$)-&gt;start()): ?&gt;&#10;    $CONTENT$&#10;    &lt;?php $this-&gt;cache(&quot;$CACHE_KEY$&quot;)-&gt;end(); ?&gt;&#10;&lt;?php endif; ?&gt;&#10;$END$" description="pimcore cache" toReformat="true" toShortenFQNames="true">
+    <variable name="CACHE_KEY" expression="camelCase(String)" defaultValue="&quot;cacheKey&quot;" alwaysStopAt="true" />
+    <variable name="LIFETIME" expression="" defaultValue="&quot;1800&quot;" alwaysStopAt="true" />
+    <variable name="CONTENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="translate" value="&lt;?= $this-&gt;t(&quot;$PARAM1$&quot;) ?&gt; $END$" description="pimcore translate" toReformat="true" toShortenFQNames="true">
+    <variable name="PARAM1" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="template" value="&lt;?= $this-&gt;template(&quot;$PATH$&quot;, [&quot;$PARAM1$&quot; =&gt; $PARAM2$]) $ENDE$ ?&gt;" description="Pimcore template include helper" toReformat="false" toShortenFQNames="true">
+    <variable name="PATH" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PARAM1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PARAM2" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ENDE" expression="" defaultValue="" alwaysStopAt="true" />
+  </template>
+  <template name="include php" value="$this-&gt;inc(&quot;$PATH$&quot;, [&quot;$PARAM1$&quot; =&gt; $PARAM2$]); $END$" description="pimcore include" toReformat="true" toShortenFQNames="true">
+    <variable name="PATH" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PARAM1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PARAM2" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="include" value="&lt;?php $this-&gt;inc(&quot;$PATH$&quot;, [&quot;$PARAM1$&quot; =&gt; $PARAM2$]); ?&gt; $END$ " description="pimcore include" toReformat="true" toShortenFQNames="true">
+    <variable name="PATH" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PARAM1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PARAM2" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="translate php" value="$this-&gt;t(&quot;$PARAM1$&quot;); $END$" description="pimcore translate" toReformat="true" toShortenFQNames="true">
+    <variable name="PARAM1" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="cache php" value="if(!$this-&gt;cache(&quot;$CACHE_KEY$&quot;, $LIFETIME$)-&gt;start()) { &#10;    $CONTENT$&#10;    $SELECTION$&#10;    $this-&gt;cache(&quot;$CACHE_KEY$&quot;)-&gt;end(); &#10;} &#10;$END$" description="pimcore cache" toReformat="true" toShortenFQNames="true">
+    <variable name="CACHE_KEY" expression="camelCase(String)" defaultValue="&quot;cacheKey&quot;" alwaysStopAt="true" />
+    <variable name="LIFETIME" expression="" defaultValue="&quot;1800&quot;" alwaysStopAt="true" />
+    <variable name="CONTENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="device" value="$this-&gt;device()" description="pimcore device" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="getParam" value="&lt;?php $this-&gt;getParam(&quot;$PARAM$&quot;) ?&gt; $END$" description="pimcore getParam" toReformat="true" toShortenFQNames="true">
+    <variable name="PARAM" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="getParam php" value="$this-&gt;getParam(&quot;$PARAM$&quot;) $END$" description="pimcore getParam" toReformat="true" toShortenFQNames="true">
+    <variable name="PARAM" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+</templateSet>

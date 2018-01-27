@@ -1,0 +1,294 @@
+<templateSet group="Pimcore Editables">
+  <template name="block" value="&lt;?php while ($this-&gt;block(&quot;$NAME$&quot;)-&gt;loop()) { ?&gt;&#10;    &#10;    $SELECTION$&#10;    $PARAM2$&#10;    &#10;&lt;?php } ?&gt;&#10;$END$&#10;" description="pimcore block" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;block&quot;" alwaysStopAt="true" />
+    <variable name="PARAM2" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="checkbox" value="&lt;?= $this-&gt;checkbox(&quot;$NAME$&quot;) ?&gt; $END$" description="pimcore checkbox" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;checkbox&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="date" value="&lt;?= $this-&gt;date(&quot;$NAME$&quot;, [&quot;format&quot; =&gt; &quot;$FORMAT$&quot;]) ?&gt; $END$" description="pimcore date" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;date&quot;" alwaysStopAt="true" />
+    <variable name="FORMAT" expression="" defaultValue="&quot;%d.%m.%Y&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="href" value="&lt;?= $this-&gt;href(&quot;$NAME$&quot;, [&#10;    &quot;types&quot; =&gt; [&quot;asset&quot;,&quot;object&quot;],&#10;    &quot;subtypes&quot; =&gt; [&#10;        &quot;asset&quot; =&gt; [&quot;video&quot;,&quot;image&quot;],&#10;        &quot;object&quot; =&gt; [&quot;object&quot;]&#10;     ],&#10;    &quot;classes&quot; =&gt; [&quot;person&quot;],&#10;]); ?&gt;&#10;$END$" description="pimcore href" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;href&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="image" value="&lt;?= $this-&gt;image(&quot;$NAME$&quot;, [&#10;    &quot;title&quot; =&gt; &quot;$TITLE$&quot;, &#10;    &quot;thumbnail&quot; =&gt; &quot;$THUMB$&quot;&#10;]) ?&gt; $END$" description="pimcore image" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;image&quot;" alwaysStopAt="true" />
+    <variable name="TITLE" expression="" defaultValue="&quot;Drag your image here.&quot;" alwaysStopAt="true" />
+    <variable name="THUMB" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="input" value="&lt;?= $this-&gt;input(&quot;$NAME$&quot;) ?&gt; $END$" description="pimcore input" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;input&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="link" value="&lt;?= $this-&gt;link(&quot;$NAME$&quot;, [&quot;class&quot; =&gt; &quot;$CLASS$&quot;]) ?&gt; $END$" description="pimcore link" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;link&quot;" alwaysStopAt="true" />
+    <variable name="CLASS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="mutlihref" value="&lt;?= $this-&gt;multihref(&quot;$NAME$&quot;, [&#10;    &quot;types&quot; =&gt; [&quot;asset&quot;, &quot;object&quot;],&#10;        &quot;subtypes&quot; =&gt; [&#10;            &quot;asset&quot; =&gt; [&quot;video&quot;, &quot;image&quot;],&#10;            &quot;object&quot; =&gt; [&quot;object&quot;]&#10;         ],&#10;        &quot;classes&quot; =&gt; [&quot;person&quot;]&#10;]) ?&gt; $END$" description="pimcore multihref" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;multihref&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="select" value="&lt;?= $this-&gt;select(&quot;$NAME$&quot;, [&#10;                &quot;store&quot; =&gt; [&#10;                    [&quot;$PARAM2$&quot;, &quot;$PARAM3$&quot;] &#10;                    ],&#10;                &quot;reload&quot; =&gt; true&#10;            ]); ?&gt;" description="pimcore select" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;select&quot;" alwaysStopAt="true" />
+    <variable name="PARAM2" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PARAM3" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="textarea" value="&lt;?= $this-&gt;textarea(&quot;$NAME$&quot;, [&#10;        &quot;nl2br&quot; =&gt; true,&#10;        &quot;height&quot; =&gt; 150,&#10;        &quot;placeholder&quot; =&gt;&#10;            &quot;$PLACEHOLDER$&quot;&#10;    ]); ?&gt; $END$" description="pimcore textarea" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;textarea&quot;" alwaysStopAt="true" />
+    <variable name="PLACEHOLDER" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="wisi" value="&lt;?= $this-&gt;wysiwyg(&quot;$NAME$&quot;, [&#10;                        'enterMode' =&gt; 2,&#10;                        &quot;toolbarGroups&quot; =&gt; [&#10;                            [&#10;                                &quot;name&quot; =&gt; 'basicstyles',&#10;                                &quot;groups&quot; =&gt; ['basicstyles']&#10;                            ]&#10;                        ]&#10;                    ]) ?&gt; $END$" description="pimcore wysiwyg" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="wysiwyg" value="&lt;?= $this-&gt;wysiwyg(&quot;$NAME$&quot;, [&#10;                        'enterMode' =&gt; 2,&#10;                        &quot;toolbarGroups&quot; =&gt; [&#10;                            [&#10;                                &quot;name&quot; =&gt; 'basicstyles',&#10;                                &quot;groups&quot; =&gt; ['basicstyles']&#10;                            ]&#10;                        ]&#10;                    ]) ?&gt; $END$" description="pimcore wysiwyg" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;wysiwyg&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="areablock" value="&lt;?= $this-&gt;areablock(&quot;$NAME$&quot;, [&#10;    &quot;allowed&quot; =&gt; $ALLOWED$&#10;    ]);&#10;?&gt;&#10;$END$" description="pimcore areablock" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;areablock&quot;" alwaysStopAt="true" />
+    <variable name="ALLOWED" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="areablock php" value="$this-&gt;areablock(&quot;$NAME$&quot;, [&#10;    &quot;allowed&quot; =&gt; $ALLOWED$&#10;]);&#10;$END$" description="pimcore areablock" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;areablock&quot;" alwaysStopAt="true" />
+    <variable name="ALLOWED" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="block php" value="while ($this-&gt;block(&quot;$NAME$&quot;)-&gt;loop()) {&#10;    &#10;    $SELECTION$&#10;    $PARAM2$&#10;    &#10;}&#10;$END$&#10;" description="pimcore block" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;block&quot;" alwaysStopAt="true" />
+    <variable name="PARAM2" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="area" value=" &lt;?= $this-&gt;area(&quot;$NAME$&quot;, [&quot;type&quot; =&gt; &quot;$TYPE$&quot;]); ?&gt;" description="pimcore area" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;area&quot;" alwaysStopAt="true" />
+    <variable name="TYPE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="area php" value="$this-&gt;area(&quot;$NAME$&quot;, [&quot;type&quot; =&gt; &quot;$TYPE$&quot;]); &#10;$END$" description="pimcore area" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;area&quot;" alwaysStopAt="true" />
+    <variable name="TYPE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="checkbox php" value="$this-&gt;checkbox(&quot;$NAME$&quot;) ?&gt; $END$" description="pimcore checkbox" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;checkbox&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="date php" value="$this-&gt;date(&quot;$NAME$&quot;, [&quot;format&quot; =&gt; &quot;$FORMAT$&quot;]) $END$" description="pimcore date" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;date&quot;" alwaysStopAt="true" />
+    <variable name="FORMAT" expression="" defaultValue="&quot;%d.%m.%Y&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="href php" value="$this-&gt;href(&quot;$NAME$&quot;, [&#10;    &quot;types&quot; =&gt; [&quot;asset&quot;,&quot;object&quot;],&#10;    &quot;subtypes&quot; =&gt; [&#10;        &quot;asset&quot; =&gt; [&quot;video&quot;,&quot;image&quot;],&#10;        &quot;object&quot; =&gt; [&quot;object&quot;]&#10;     ],&#10;    &quot;classes&quot; =&gt; [&quot;person&quot;],&#10;]);&#10;$END$" description="pimcore href" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;href&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="image php" value="$this-&gt;image(&quot;$NAME$&quot;, [&#10;    &quot;title&quot; =&gt; &quot;$TITLE$&quot;, &#10;    &quot;thumbnail&quot; =&gt; &quot;$THUMB$&quot;&#10;]); &#10;$END$" description="pimcore image" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;image&quot;" alwaysStopAt="true" />
+    <variable name="TITLE" expression="" defaultValue="&quot;Drag your image here.&quot;" alwaysStopAt="true" />
+    <variable name="THUMB" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="input php" value="$this-&gt;input(&quot;$NAME$&quot;) $END$" description="pimcore input" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;input&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="link php" value="$this-&gt;link(&quot;$NAME$&quot;, [&quot;class&quot; =&gt; &quot;$CLASS$&quot;]) $END$" description="pimcore link" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;link&quot;" alwaysStopAt="true" />
+    <variable name="CLASS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="mutlihref php" value="$this-&gt;multihref(&quot;$NAME$&quot;, [&#10;    &quot;types&quot; =&gt; [&quot;asset&quot;, &quot;object&quot;],&#10;        &quot;subtypes&quot; =&gt; [&#10;            &quot;asset&quot; =&gt; [&quot;video&quot;, &quot;image&quot;],&#10;            &quot;object&quot; =&gt; [&quot;object&quot;]&#10;         ],&#10;        &quot;classes&quot; =&gt; [&quot;person&quot;]&#10;]) $END$" description="pimcore multihref" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;multihref&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="select php" value="&lt;?= $this-&gt;select(&quot;$NAME$&quot;, [&#10;                &quot;store&quot; =&gt; [&#10;                    [&quot;$PARAM2$&quot;, &quot;$PARAM3$&quot;] &#10;                    ],&#10;                &quot;reload&quot; =&gt; true&#10;            ]); ?&gt; &#10;            $END$" description="pimcore select" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;select&quot;" alwaysStopAt="true" />
+    <variable name="PARAM2" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PARAM3" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="multiselect" value="&lt;?= $this-&gt;multiselect(&quot;$NAME$&quot;, [&#10;        &quot;width&quot; =&gt; 200,&#10;        &quot;height&quot; =&gt; 100,&#10;        &quot;store&quot; =&gt; [&#10;            [&quot;$VALUE$&quot;, &quot;$KEY$&quot;]&#10;        ]&#10;    ]) ?&gt;&#10;    $END$" description="pimcore multiselect" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VALUE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="KEY" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="multiselect php" value="$this-&gt;multiselect(&quot;$NAME$&quot;, [&#10;        &quot;width&quot; =&gt; 200,&#10;        &quot;height&quot; =&gt; 100,&#10;        &quot;store&quot; =&gt; [&#10;            [&quot;$VALUE$&quot;, &quot;$KEY$&quot;]&#10;        ]&#10;    ]);&#10;    $END$" description="pimcore multiselect" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;multiselect&quot;" alwaysStopAt="true" />
+    <variable name="VALUE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="KEY" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="numeric" value="&lt;?= $this-&gt;numeric(&quot;$NAME$&quot;, [&#10;    &quot;width&quot; =&gt; 300,&#10;    &quot;minValue&quot; =&gt; 0,&#10;    &quot;maxValue&quot; =&gt; 100,&#10;    &quot;decimalPrecision&quot; =&gt; 0&#10;]); ?&gt; $END$" description="pimcore numeric" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;numeric&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="numeric php" value="$this-&gt;numeric(&quot;$NAME$&quot;, [&#10;    &quot;width&quot; =&gt; 300,&#10;    &quot;minValue&quot; =&gt; 0,&#10;    &quot;maxValue&quot; =&gt; 100,&#10;    &quot;decimalPrecision&quot; =&gt; 0&#10;]); $END$" description="pimcore numeric" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;numeric&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="embed" value="&lt;?= $this-&gt;embed(&quot;$NAME$&quot;); ?&gt; $END$" description="pimcore embed" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;embed&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="embed php" value="$this-&gt;embed(&quot;$NAME$&quot;); $END$" description="pimcore embed" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;embed&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="pdf" value="&lt;?= $this-&gt;pdf(&quot;$NAME$&quot;, [&quot;width&quot; =&gt; 640]); ?&gt; $END$" description="pimcore pdf" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;pdf&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="pdf php" value="$this-&gt;pdf(&quot;$NAME$&quot;, [&quot;width&quot; =&gt; 640]); $END$" description="pimcore pdf" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;pdf&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="renderlet" value="&lt;?= $this-&gt;renderlet(&quot;$NAME$&quot;, [&#10;        &quot;controller&quot; =&gt; &quot;$CONTROLLER$&quot;,&#10;        &quot;action&quot; =&gt; &quot;$ACTION$&quot;,&#10;        &quot;title&quot; =&gt; &quot;$TITLE$&quot;,&#10;        &quot;height&quot; =&gt; 400&#10;    ]); ?&gt; $END$" description="pimcore renderlet" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;renderlet&quot;" alwaysStopAt="true" />
+    <variable name="CONTROLLER" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ACTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TITLE" expression="" defaultValue="&quot;Drag an asset folder here to get a gallery.&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="renderlet php" value="$this-&gt;renderlet(&quot;$NAME$&quot;, [&#10;        &quot;controller&quot; =&gt; &quot;$CONTROLLER$&quot;,&#10;        &quot;action&quot; =&gt; &quot;$ACTION$&quot;,&#10;        &quot;title&quot; =&gt; &quot;$TITLE$&quot;,&#10;        &quot;height&quot; =&gt; 400&#10;    ]); $END$" description="pimcore renderlet" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;renderlet&quot;" alwaysStopAt="true" />
+    <variable name="CONTROLLER" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ACTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TITLE" expression="" defaultValue="&quot;Drag an asset folder here to get a gallery.&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="snippet" value="&lt;?= $this-&gt;snippet(&quot;$NAME$&quot;, [&quot;width&quot; =&gt; 250, &quot;height&quot; =&gt; 100]); ?&gt; $END$" description="pimcore snippet" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;snippet&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="snippet php" value="$this-&gt;snippet(&quot;$NAME$&quot;, [&quot;width&quot; =&gt; 250, &quot;height&quot; =&gt; 100]); $END$" description="pimcore snippet" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;snippet&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="table" value="&lt;?= $this-&gt;table(&quot;$NAME$&quot;, [&#10;    &quot;width&quot; =&gt; 700,&#10;    &quot;height&quot; =&gt; 400,&#10;    &quot;defaults&quot; =&gt; [&#10;        &quot;cols&quot; =&gt; $COLS$,&#10;        &quot;rows&quot; =&gt; $ROWS$,&#10;        &quot;data&quot; =&gt; [&#10;            [&quot;Attribute name&quot;, &quot;Value&quot;], // th&#10;            [&quot;Color&quot;, &quot;Black&quot;],&#10;            [&quot;Size&quot;, &quot;Large&quot;],&#10;            [&quot;Availability&quot;, &quot;Out of stock&quot;]&#10;        ]&#10;    ]&#10;]); ?&gt;&#10;" description="pimcore table" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;table&quot;" alwaysStopAt="true" />
+    <variable name="COLS" expression="" defaultValue="2" alwaysStopAt="true" />
+    <variable name="ROWS" expression="" defaultValue="3" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="table php" value="$this-&gt;table(&quot;$NAME$&quot;, [&#10;    &quot;width&quot; =&gt; 700,&#10;    &quot;height&quot; =&gt; 400,&#10;    &quot;defaults&quot; =&gt; [&#10;        &quot;cols&quot; =&gt; $COLS$,&#10;        &quot;rows&quot; =&gt; $ROWS$,&#10;        &quot;data&quot; =&gt; [&#10;            [&quot;Attribute name&quot;, &quot;Value&quot;], // th&#10;            [&quot;Color&quot;, &quot;Black&quot;],&#10;            [&quot;Size&quot;, &quot;Large&quot;],&#10;            [&quot;Availability&quot;, &quot;Out of stock&quot;]&#10;        ]&#10;    ]&#10;]); $END$&#10;" description="pimcore table" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;table&quot;" alwaysStopAt="true" />
+    <variable name="COLS" expression="" defaultValue="2" alwaysStopAt="true" />
+    <variable name="ROWS" expression="" defaultValue="3" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="textarea php" value="$this-&gt;textarea(&quot;$NAME$&quot;, [&#10;        &quot;nl2br&quot; =&gt; true,&#10;        &quot;height&quot; =&gt; 150,&#10;        &quot;placeholder&quot; =&gt;&#10;            &quot;$PLACEHOLDER$&quot;&#10;    ]); $END$" description="pimcore textarea" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;textarea&quot;" alwaysStopAt="true" />
+    <variable name="PLACEHOLDER" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="video" value="&lt;?= $this-&gt;video(&quot;$NAME$&quot;, [&#10;    &quot;width&quot; =&gt; 700,&#10;    &quot;height&quot; =&gt; 400&#10;]); ?&gt;" description="pimcore video" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;video&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="video php" value="$this-&gt;video(&quot;$NAME$&quot;, [&#10;    &quot;width&quot; =&gt; 700,&#10;    &quot;height&quot; =&gt; 400&#10;]); $END$" description="pimcore video" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;video&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="wysiwyg php" value="$this-&gt;wysiwyg(&quot;$NAME$&quot;, [&#10;                        'enterMode' =&gt; 2,&#10;                        &quot;toolbarGroups&quot; =&gt; [&#10;                            [&#10;                                &quot;name&quot; =&gt; 'basicstyles',&#10;                                &quot;groups&quot; =&gt; ['basicstyles']&#10;                            ]&#10;                        ]&#10;                    ]); $END$" description="pimcore wysiwyg" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;wysiwyg&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+</templateSet>
